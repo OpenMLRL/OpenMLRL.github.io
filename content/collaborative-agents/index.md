@@ -20,5 +20,8 @@ resources:
 We are a group of researchers focusing on optimizing multi-LLM systems.
 
 Our missions are:
-• Training LLMs to cooperate effectively with each other
-• Optimizing LLMs to collaborate with other static models in the system
+
+<ul>
+<li>Training LLMs to cooperate effectively with each other</li>
+<li>Optimizing LLMs to collaborate with other static models in the system</li>
+</ul>
