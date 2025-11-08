@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <section class="footer-social">
+    {{ with site.Params.socialIcons.github }}
+      <a class="footer-action" href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" d="M12 2C6.477 2 2 6.486 2 12.021c0 4.422 2.865 8.173 6.839 9.5.5.094.681-.216.681-.48 0-.237-.009-.866-.013-1.702-2.782.606-3.369-1.344-3.369-1.344-.454-1.157-1.11-1.465-1.11-1.465-.907-.62.07-.607.07-.607 1.002.07 1.53 1.03 1.53 1.03.893 1.53 2.342 1.088 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.114-4.555-4.952 0-1.093.39-1.987 1.029-2.687-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.56 9.56 0 0 1 12 6.844c.85.004 1.705.115 2.503.337 1.91-1.296 2.748-1.026 2.748-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.594 1.028 2.687 0 3.844-2.339 4.694-4.567 4.94.359.31.679.92.679 1.855 0 1.338-.012 2.419-.012 2.747 0 .265.18.577.684.48A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/>
+        </svg>
+      </a>
+    {{ end }}
+    {{ with site.Params.socialIcons.huggingface }}
+      {{ $hfIcon := resources.Get "img/huggingface.svg" }}
+      <a class="footer-action" href="{{ . }}" target="_blank" rel="noopener" aria-label="Hugging Face">
+        {{ if $hfIcon }}
+          <img src="{{ $hfIcon.RelPermalink }}" alt="Hugging Face" width="28" height="28" loading="lazy" />
+        {{ else }}
+          <img src='{{ "img/huggingface.svg" | relURL }}' alt="Hugging Face" width="28" height="28" loading="lazy" />
+        {{ end }}
+      </a>
+    {{ end }}
+    {{ with site.Params.socialIcons.email }}
+      <a class="footer-action" href="{{ . }}" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path fill="currentColor" d="M4 6c-1.103 0-2 .897-2 2v8c0 1.102.897 2 2 2h16c1.103 0 2-.898 2-2V8c0-1.103-.897-2-2-2H4zm0 2h16l-8 5-8-5zm0 3.236 7.445 4.653a1 1 0 0 0 1.11 0L20 11.236V16H4v-4.764z"/>
+        </svg>
+      </a>
+    {{ end }}
+  </section>
+  <section>
+    © {{ now.Format "2006" }} OpenMLRL. All rights reserved.
+  </section>
+</footer>

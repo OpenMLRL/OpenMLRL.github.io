@@ -1,0 +1,24 @@
+{{ $gallery := partial "get-gallery.html" . }}
+{{ with $gallery }}
+  <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
+    <div>
+      {{ $logo := resources.Get "img/comlrl-logo.png" }}
+      {{ if $logo }}
+        <img class="card-logo" src="{{ $logo.RelPermalink }}" alt="{{ .page.Title }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" loading="lazy" />
+      {{ else }}
+        <h2>{{ .page.Title }}</h2>
+      {{ end }}
+      <p>
+        {{ with .page.Params.card_tagline }}
+          <em>{{ . }}</em>
+        {{ else }}
+          {{ if gt .albumCount 0 }}
+            {{ T "albumCount" (dict "count" (.albumCount | lang.FormatNumber 0) "photoCount" (.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}
+          {{ else }}
+            {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
+          {{ end }}
+        {{ end }}
+      </p>
+    </div>
+  </a>
+{{ end }}

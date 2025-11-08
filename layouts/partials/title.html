@@ -1,0 +1,10 @@
+{{ if or .Params.Description .Content }}
+  <section class="lead-copy">
+    {{ with .Params.Description }}
+      <p>{{ . | markdownify }}</p>
+    {{ end }}
+    {{ with .Content }}
+      {{ . }}
+    {{ end }}
+  </section>
+{{ end }}

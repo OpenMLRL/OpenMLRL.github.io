@@ -1,0 +1,57 @@
+baseURL = '/'
+title = 'OpenMLRL'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+theme = 'hugo-theme-gallery'
+relativeURLs = true
+enableRobotsTXT = true
+timeZone = 'Etc/UTC'
+publishDir = 'public'
+summaryLength = 24
+
+[params]
+  title = 'OpenMLRL'
+  description = 'Reinforcement learning research for collaborative LLM systems.'
+  defaultTheme = 'light'
+  [params.author]
+    name = 'OpenMLRL Collective'
+    email = 'liu.shuo2@northeastern.edu'
+  [params.socialIcons]
+    github = 'https://github.com/OpenMLRL'
+    email = 'mailto:liu.shuo2@northeastern.edu'
+    huggingface = 'https://huggingface.co/LovelyBuggies'
+  [params.gallery]
+    targetRowHeight = 320
+    targetRowHeightTolerance = 0.2
+    boxSpacing = 12
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML']
+
+[imaging]
+  quality = 85
+  resampleFilter = 'CatmullRom'
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.footer]]
+    name = 'GitHub'
+    url = 'https://github.com/OpenMLRL'
+    weight = 1
+  [[menu.footer]]
+    name = 'CoMLRL Docs'
+    url = 'https://github.com/OpenMLRL/CoMLRL/tree/main/docs'
+    weight = 2
+
+[services]
+  [services.rss]
+    limit = 50

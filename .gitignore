@@ -1,0 +1,10 @@
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+.hugo_cache/
+
+# Local tooling
+.DS_Store
+node_modules/
+*.log
