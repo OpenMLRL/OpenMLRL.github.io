@@ -19,7 +19,7 @@ summaryLength = 24
   [params.socialIcons]
     github = 'https://github.com/OpenMLRL'
     email = 'mailto:liu.shuo2@northeastern.edu'
-    huggingface = 'https://huggingface.co/LovelyBuggies'
+    huggingface = 'https://huggingface.co/OpenMLRL'
   [params.gallery]
     targetRowHeight = 320
     targetRowHeightTolerance = 0.2
