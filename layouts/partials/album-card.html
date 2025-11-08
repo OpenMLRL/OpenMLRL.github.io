@@ -1,6 +1,7 @@
 {{ $gallery := partial "get-gallery.html" . }}
 {{ with $gallery }}
-  <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
+  {{ $href := .page.Params.external_url | default .page.RelPermalink }}
+  <a class="card" href="{{ $href }}" title="{{ .page.Title }}"{{ if .page.Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>
     <div>
       {{ $logo := resources.Get "img/comlrl-logo.png" }}
       {{ if $logo }}

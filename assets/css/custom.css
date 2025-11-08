@@ -122,32 +122,57 @@ section.galleries,
   letter-spacing: 0.04em;
 }
 
+.lead-copy .lead-subtext {
+  color: #6d7487;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lead-copy .lead-subtext + .lead-subtext {
+  margin-top: 0.5rem;
+}
+
+.lead-copy .lead-subtext--small {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
 .lead-subtext {
   display: block;
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: normal;
-  margin-top: 2rem;
-  font-family: inherit;
+  line-height: 1.6;
+  color: #6d7487;
+  margin: 0;
 }
 
-.lead-copy strong {
-  color: var(--text-1);
+.lead-subtext + .lead-subtext {
+  margin-top: 0.5rem;
 }
 
-.lead-copy ul {
-  list-style: disc;
-  margin-left: 1.75rem;
-  color: var(--text-1);
-  font-size: 1.1rem;
+.lead-subtext--small {
+  font-size: 1.2rem;
   line-height: 1.5;
-  padding-left: 0;
-  text-align: left;
 }
 
-.lead-copy li {
-  margin-bottom: 0.5rem;
+.prose .lead-subtext {
+  display: block;
+  color: #6d7487;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.prose .lead-subtext + .lead-subtext {
+  margin-top: 0.5rem;
+}
+
+.prose .lead-subtext--small {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 nav.categories {
@@ -293,11 +318,4 @@ section.galleries {
 .card p {
   font-size: calc(1rem + 2rem);
   line-height: 1.2;
-}
-.lead-subtext {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: normal;
 }

@@ -8,3 +8,5 @@ resources/_gen/
 .DS_Store
 node_modules/
 *.log
+.idea/
+*.bak

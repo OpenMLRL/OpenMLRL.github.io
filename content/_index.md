@@ -7,8 +7,16 @@ resources:
       cover: true
 ---
 
-👋  Welcome to OpenMLRL
+Welcome to OpenMLRL 👋
 
 
 
-<span class="lead-subtext">We train cooperative MARL agents, adapt them to LLM deployments, and pair them with the deterministic tools that keep the stack reliable.</span>
+<p class="lead-subtext lead-subtext--small">
+  <br>We are a group of researchers focusing on optimizing multi-LLM systems with reinforcement learning.<br><br>
+</p>
+<p class="lead-subtext lead-subtext--small">Our missions are:<br></p>
+<ul class="lead-subtext lead-subtext--small" 
+    style="list-style-type: disc; margin-left: 1.5em; margin-top: 0.4em; line-height: 2;">
+  <li>Training multiple agents to cooperate effectively with each other</li>
+  <li>Optimizing agents to collaborate with other static models in the system</li>
+</ul>
