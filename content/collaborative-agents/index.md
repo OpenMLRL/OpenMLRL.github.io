@@ -17,9 +17,8 @@ resources:
     title: Workflow orchestration map spanning data to deployment
 ---
 
-- **Cooperative curricula** — Tracks MARL reward shaping experiments that help
-  autonomous LLM agents reason together without talking past each other.
-- **Evaluation loop** — Captures how new dialogue policies graduate from dry
-  runs into shared deployments, including the diagnostics we keep in Grafana.
-- **Orchestrator notes** — Documents the hand-offs between agents and static
-  tools so we can pinpoint where collaboration still breaks down.
+We are a group of researchers focusing on optimizing multi-LLM systems.
+
+Our missions are:
+• Training LLMs to cooperate effectively with each other
+• Optimizing LLMs to collaborate with other static models in the system
