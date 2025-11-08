@@ -4,8 +4,8 @@
   --text-1-light: #0e172a;
   --text-2-light: #465168;
   --border-light: #b9c7dc;
-  --content-width: 1200px;
-  --content-gutter: 1.5rem;
+  --content-width: 900px;
+  --content-gutter: 2.5rem;
   --surface-1: var(--surface-1-light);
   --surface-2: var(--surface-2-light);
   --text-1: var(--text-1-light);
@@ -24,6 +24,10 @@ html.dark {
 body {
   background-color: var(--surface-1);
   color: var(--text-1);
+}
+
+main {
+  padding-top: 6rem;
 }
 
 .site-header,
@@ -104,7 +108,7 @@ section.galleries,
 }
 
 .lead-copy {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 6rem;
   max-width: var(--content-width);
   margin-left: auto;

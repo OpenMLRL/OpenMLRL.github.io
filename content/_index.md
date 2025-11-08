@@ -7,7 +7,14 @@ resources:
       cover: true
 ---
 
-Welcome to OpenMLRL 👋
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+<div style="display: flex; align-items: center;">
+  <img src="/img/openmlrl.svg" alt="OpenMLRL Logo" width="50" height="50" loading="lazy">
+  <span style="margin-left: 24px; margin-right: 16px; font-family: 'Inter', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 2.5rem; color: #2b3553;">
+    Welcome to OpenMLRL
+  </span>
+</div>
 
 
 
@@ -16,8 +23,8 @@ Welcome to OpenMLRL 👋
 </p>
 <p class="lead-subtext lead-subtext--small">Our missions are:<br></p>
 <ul class="lead-subtext lead-subtext--small" 
-    style="list-style-type: disc; margin-left: 1.5em; margin-top: 0.4em; line-height: 2;">
-  <li>Training LLM agents to cooperate effectively to solve tasks together</li>
-  <li>Improving the performance and scalability of RL methods in multi-LLM systems</li>
-  <li>Enabling multi-turn interactions between agents and other models to strengthen reasoning</li>
+    style="list-style-type: disc; margin-left: 2em; margin-top: 0.6em; line-height: 2;">
+  <li> Training LLM agents to cooperate effectively to solve tasks together</li>
+  <li> Improving the performance and scalability of RL methods in multi-LLM systems</li>
+  <li> Enabling multi-turn interactions between agents and other models to strengthen reasoning</li>
 </ul>
