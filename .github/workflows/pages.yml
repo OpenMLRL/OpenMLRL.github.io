@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SITE_BASE_URL: https://openmlrl.github.io
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,14 +32,8 @@ jobs:
           hugo-version: '0.152.2'
           extended: true
 
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: hugo
-
       - name: Build with Hugo
-        run: hugo --gc --minify -b "${{ steps.pages.outputs.base_url }}"
+        run: hugo --gc --minify -b "${SITE_BASE_URL}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
