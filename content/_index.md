@@ -10,7 +10,7 @@ resources:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
 <div style="display: flex; align-items: center;">
-  <img src="/img/openmlrl.svg" alt="OpenMLRL Logo" width="50" height="50" loading="lazy">
+  <img src="/img/openmlrl.svg" alt="OpenMLRL Logo" width="64" height="64" loading="lazy">
   <span style="margin-left: 24px; margin-right: 16px; font-family: 'Inter', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 2.5rem; color: #2b3553;">
     Welcome to OpenMLRL
   </span>
