@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  padding-top: 6rem;
+  padding-top: 5rem;
 }
 
 .site-header,
@@ -109,7 +109,7 @@ section.galleries,
 
 .lead-copy {
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
@@ -275,10 +275,17 @@ section.galleries {
     var(--surface-1);
   border: none;
   box-shadow: 0 18px 40px rgba(11, 20, 40, 0.12);
-  flex: 1 1 300px;
-  max-width: 450px;
-  min-width: 300px;
+  flex: 0 1 350px;
+  max-width: 400px;
+  min-width: 250px;
+  padding: 1.2rem 1.2rem;
+  box-sizing: border-box;
   color: var(--text-1);
+}
+
+.card > div {
+  padding: 0;
+  gap: 0.2rem;
 }
 
 .card > div > h2,
