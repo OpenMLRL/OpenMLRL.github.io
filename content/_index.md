@@ -19,7 +19,7 @@ resources:
 
 
 <p class="lead-subtext lead-subtext--small">
-  <br>We are a group of researchers focusing on optimizing multi-LLM systems with reinforcement learning.<br><br>
+  <br>We are a group of researchers focusing on optimizing multi-LLM systems with reinforcement learning. We develop open-source frameworks and tools to enrich this community.<br><br>
 </p>
 <p class="lead-subtext lead-subtext--small">Our missions are:<br></p>
 <ul class="lead-subtext lead-subtext--small" 
