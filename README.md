@@ -27,8 +27,9 @@ mistake.
 
 The GitHub Pages workflow clones [`OpenMLRL/CoMLRL`](https://github.com/OpenMLRL/CoMLRL),
 builds its Hugo docs site with `HUGO_RELATIVEURLS=false hugo --gc --minify -s docs -b "$SITE_BASE_URL/CoMLRL/"`,
-and copies the generated `docs/public/` folder into `static/CoMLRL/` right before
-running `hugo` for this site. No CoMLRL HTML lives in Git anymore; the files only
-exist in the CI workspace and the published Pages artifact. If you need to test
-those docs locally, run `HUGO_RELATIVEURLS=false hugo --gc --minify -s docs -b "http://localhost:1313/CoMLRL/"` from the CoMLRL repo, copy the resulting `docs/public/`
-into `static/CoMLRL/`, and then start `hugo server`.
+runs this gallery site with `hugo --gc --minify`, and finally copies the generated
+`docs/public/` folder straight into the deployment directory (`public/CoMLRL/`)
+before uploading to Pages. No CoMLRL HTML or caches live in either repository; they
+only exist inside the CI workspace and the published artifact. For local previews,
+run `hugo server -s docs` in the CoMLRL repo independently (it serves on another port),
+and preview this gallery via `hugo server` as usual.

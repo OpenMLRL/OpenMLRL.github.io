@@ -44,14 +44,14 @@ jobs:
           HUGO_RELATIVEURLS: "false"
         run: hugo --gc --minify -s docs -b "${SITE_BASE_URL}/CoMLRL/"
 
-      - name: Sync CoMLRL docs into site static dir
-        run: |
-          rm -rf static/CoMLRL
-          mkdir -p static/CoMLRL
-          rsync -a comlrl-src/docs/public/ static/CoMLRL/
-
       - name: Build with Hugo
         run: hugo --gc --minify -b "${SITE_BASE_URL}"
+
+      - name: Bundle CoMLRL docs into final site
+        run: |
+          rm -rf public/CoMLRL
+          mkdir -p public/CoMLRL
+          rsync -a comlrl-src/docs/public/ public/CoMLRL/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
