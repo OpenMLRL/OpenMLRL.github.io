@@ -32,6 +32,22 @@ jobs:
           hugo-version: '0.152.2'
           extended: true
 
+      - name: Checkout CoMLRL docs
+        uses: actions/checkout@v4
+        with:
+          repository: OpenMLRL/CoMLRL
+          path: comlrl-src
+
+      - name: Build CoMLRL docs
+        working-directory: comlrl-src
+        run: hugo --gc --minify -s docs -b "${SITE_BASE_URL}/CoMLRL/"
+
+      - name: Sync CoMLRL docs into site static dir
+        run: |
+          rm -rf static/CoMLRL
+          mkdir -p static/CoMLRL
+          rsync -a comlrl-src/docs/public/ static/CoMLRL/
+
       - name: Build with Hugo
         run: hugo --gc --minify -b "${SITE_BASE_URL}"
 
