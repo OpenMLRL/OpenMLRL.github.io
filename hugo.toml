@@ -49,7 +49,7 @@ summaryLength = 24
     weight = 1
   [[menu.footer]]
     name = 'CoMLRL Docs'
-    url = 'https://github.com/OpenMLRL/CoMLRL/tree/main/docs'
+    url = '/CoMLRL/'
     weight = 2
 
 [services]
