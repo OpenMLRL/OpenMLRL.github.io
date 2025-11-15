@@ -23,7 +23,7 @@ To create a production build locally, run `hugo --gc --minify`. The output still
 lands inside `public/`, which is ignored by Git so it will not be committed by
 mistake.
 
-## CoMLRL docs import
+## CoMLRL docs
 
 The GitHub Pages workflow clones [`OpenMLRL/CoMLRL`](https://github.com/OpenMLRL/CoMLRL),
 builds its Hugo docs site with `HUGO_RELATIVEURLS=false hugo --gc --minify -s docs -b "$SITE_BASE_URL/CoMLRL/"`,
