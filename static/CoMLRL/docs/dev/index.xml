@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developers on CoMLRL</title><link>/docs/dev/</link><description>Recent content in Developers on CoMLRL</description><generator>Hugo</generator><language>en-us</language><atom:link href="/docs/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Support</title><link>/docs/dev/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/support/</guid><description>&lt;p&gt;We are willing to help you with any issues you encounter while using CoMLRL.&lt;/p&gt;
+&lt;h2 id="report-issues"&gt;Report Issues&lt;a class="anchor" href="#report-issues"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you are stuck with a problem using CoMLRL, please follow this procedure:&lt;/p&gt;
+&lt;div class="book-steps"&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Read the documentation first, including using the search feature (Ctrl + K).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search the &lt;a href="https://github.com/OpenMLRL/CoMLRL/issues"&gt;GitHub Issues&lt;/a&gt; archives to see if someone else already had the same problem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Before writing, try to create a minimal example that reproduces the problem. You&amp;rsquo;ll get the fastest response if you can send just a handful of lines of code that show what isn&amp;rsquo;t working.&lt;/p&gt;</description></item><item><title>Contributing</title><link>/docs/dev/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/contributing/</guid><description>&lt;p&gt;Thanks for your interest in helping build CoMLRL! This guide walks you through reporting issues, contributing changes, and keeping the codebase healthy.&lt;/p&gt;
+&lt;h2 id="development-guidelines"&gt;Development Guidelines&lt;a class="anchor" href="#development-guidelines"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="book-steps"&gt;
+&lt;ol&gt;
+&lt;li&gt;Fork the upstream repository.&lt;/li&gt;
+&lt;li&gt;Clone your fork and synchronize with upstream:
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git clone https://github.com/&amp;lt;your-username&amp;gt;/CoMLRL.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#007020"&gt;cd&lt;/span&gt; CoMLRL
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git remote add upstream https://github.com/OpenMLRL/CoMLRL.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git fetch upstream
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git checkout -b feature/&amp;lt;short-description&amp;gt; upstream/main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git fetch upstream &lt;span style="color:#666"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase upstream/main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Implement new features or fix bugs, updating documentation as needed.&lt;/li&gt;
+&lt;li&gt;Open a pull request to the upstream repository and wait for review.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Changelog</title><link>/docs/dev/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/changelog/</guid><description>&lt;hr&gt;
+&lt;h2 id="version-200"&gt;Version 2.0.0&lt;a class="anchor" href="#version-200"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First release of CoMLRL.&lt;/p&gt;</description></item></channel></rss>
