@@ -1,7 +1,7 @@
 ---
 title: CoMLRL
 slug: CoMLRL
-external_url: https://github.com/OpenMLRL/CoMLRL/tree/main/docs
+external_url: https://openmlrl.github.io/CoMLRL/
 date: 2024-08-01
 categories: ["collaboration"]
 description: |
