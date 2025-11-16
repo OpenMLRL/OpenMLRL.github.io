@@ -331,3 +331,46 @@ section.galleries {
   font-size: calc(1rem + 2rem);
   line-height: 1.2;
 }
+
+/* ========== Custom responsive styles: proportional scaling ========== */
+/* Scale entire page proportionally on narrow screens */
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 16px; /* full size at 1600px */
+  }
+}
+
+/* Large screens: scale to fit 1400px viewport */
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 14px; /* 1400/1600 = 87.5% → 16px * 0.875 = 14px */
+  }
+}
+
+/* Medium-large screens: scale to fit 1200px viewport */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; /* 1200/1600 = 75% → 16px * 0.75 = 12px */
+  }
+}
+
+/* Medium screens: scale to fit 1000px viewport */
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 10px; /* 1000/1600 = 62.5% → 16px * 0.625 = 10px */
+  }
+}
+
+/* Narrow screens: scale to fit 800px viewport */
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 8px; /* 800/1600 = 50% → 16px * 0.5 = 8px */
+  }
+}
+
+/* Very narrow screens: scale to fit 600px viewport */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px; /* 600/1600 = 37.5% → 16px * 0.375 = 6px */
+  }
+}
