@@ -41,7 +41,7 @@ jobs:
       - name: Build CoMLRL docs
         working-directory: comlrl-src
         env:
-          HUGO_RELATIVEURLS: "false"
+          HUGO_RELATIVEURLS: "true"
         run: hugo --gc --minify -s docs -b "${SITE_BASE_URL}/CoMLRL/"
 
       - name: Build with Hugo
