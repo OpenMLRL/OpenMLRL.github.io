@@ -116,6 +116,11 @@ section.galleries,
   text-align: left;
 }
 
+.lead-copy img {
+  width: 4rem !important; /* 64px / 16px = 4rem */
+  height: 4rem !important;
+}
+
 .lead-copy p {
   color: var(--text-1);
   font-size: 2rem;
@@ -310,13 +315,14 @@ section.galleries {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 640px) {
+/* Removed: keep cards scaling proportionally instead of going full width */
+/* @media (max-width: 640px) {
   .card {
     flex-basis: 100%;
     max-width: none;
     min-width: 0;
   }
-}
+} */
 
 .gallery h3 a,
 .gallery h3 {
