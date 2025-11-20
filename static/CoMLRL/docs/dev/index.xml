@@ -29,7 +29,7 @@
 &lt;h2 id="version-126"&gt;Version 1.2.6&lt;a class="anchor" href="#version-126"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The first release of CoMLRL:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Including MAGRPO, MAREINFORCE, MARLOO, MAREMAX, and IAC trainers for multi-agent reinforcement learning with LLMs.&lt;/li&gt;
+&lt;li&gt;Including MAGRPO, MAREINFORCE, MARLOO, MAREMAX, and IPPO trainers for multi-agent reinforcement learning with LLMs.&lt;/li&gt;
 &lt;li&gt;Support for multi-turn training with custom external feedback mechanisms.&lt;/li&gt;
 &lt;li&gt;LLM collaboration environments for various tasks.&lt;/li&gt;
 &lt;li&gt;Comprehensive documentation and examples for getting started.&lt;/li&gt;
