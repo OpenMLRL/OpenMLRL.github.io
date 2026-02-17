@@ -26,10 +26,15 @@
 &lt;li&gt;Open a pull request to the upstream repository and wait for review.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>Changelog</title><link>/docs/dev/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/changelog/</guid><description>&lt;hr&gt;
-&lt;h2 id="version-136"&gt;Version 1.3.6&lt;a class="anchor" href="#version-136"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="version-137"&gt;Version 1.3.7&lt;a class="anchor" href="#version-137"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed critical bug of loading heterogeneous models and reform the model loading logics&lt;/li&gt;
-&lt;li&gt;Polish the docs&lt;/li&gt;
+&lt;li&gt;Remove the redundant sampling hyperparameters in algorithms.&lt;/li&gt;
+&lt;li&gt;Allow multi-gpu training with MP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="latest-changes"&gt;Latest Changes&lt;a class="anchor" href="#latest-changes"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed critical bug of loading heterogeneous models and reform the model loading logics.&lt;/li&gt;
+&lt;li&gt;Polish the docs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-135"&gt;Version 1.3.5&lt;a class="anchor" href="#version-135"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -55,13 +60,13 @@
 &lt;/ul&gt;
 &lt;h2 id="version-132"&gt;Version 1.3.2&lt;a class="anchor" href="#version-132"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix wandb logging issue in MAGRPOTrainer&lt;/li&gt;
+&lt;li&gt;Fix wandb logging issue in MAGRPOTrainer.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-131"&gt;Version 1.3.1&lt;a class="anchor" href="#version-131"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow batch training in MAGRPOTrainer, IACTrainer and MAACTrainer&lt;/li&gt;
-&lt;li&gt;Allow multi-turn training in IACTrainer and MAACTrainer&lt;/li&gt;
-&lt;li&gt;Change the x-axis from data_step to env_step&lt;/li&gt;
+&lt;li&gt;Allow batch training in MAGRPOTrainer, IACTrainer and MAACTrainer.&lt;/li&gt;
+&lt;li&gt;Allow multi-turn training in IACTrainer and MAACTrainer.&lt;/li&gt;
+&lt;li&gt;Change the x-axis from data_step to env_step.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-130"&gt;Version 1.3.0&lt;a class="anchor" href="#version-130"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Use TD error as critic update target in IACTrainer and MAACTrainer.&lt;/p&gt;</description></item></channel></rss>
