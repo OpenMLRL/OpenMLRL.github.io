@@ -52,6 +52,11 @@ jobs:
           rm -rf public/CoMLRL
           mkdir -p public/CoMLRL
           rsync -a comlrl-src/docs/public/ public/CoMLRL/
+          # CoMLRL docs include absolute /img/* references; keep root assets synced.
+          if [ -d comlrl-src/docs/public/img ]; then
+            mkdir -p public/img
+            rsync -a comlrl-src/docs/public/img/ public/img/
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
