@@ -53,11 +53,11 @@ When &lt;code&gt;agents&lt;/code&gt; is provided, &lt;code&gt;agent_model&lt;/co
 &lt;h2 id="version-137"&gt;Version 1.3.7&lt;a class="anchor" href="#version-137"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Remove the redundant sampling hyperparameters in algorithms.&lt;/li&gt;
-&lt;li&gt;Allow multi-gpu training with MP.&lt;/li&gt;
+&lt;li&gt;Allow multi-gpu training with MP (see results at PR &lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/62"&gt;#62&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="latest-changes"&gt;Latest Changes&lt;a class="anchor" href="#latest-changes"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="version-136"&gt;Version 1.3.6&lt;a class="anchor" href="#version-136"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed critical bug of loading heterogeneous models and reform the model loading logics.&lt;/li&gt;
+&lt;li&gt;Fixed critical bug of loading heterogeneous models and reform the model loading logics (see results at PR &lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/60"&gt;#60&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Polish the docs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-135"&gt;Version 1.3.5&lt;a class="anchor" href="#version-135"&gt;#&lt;/a&gt;&lt;/h2&gt;
