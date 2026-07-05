@@ -52,7 +52,8 @@ Users can load a list of heterogeneous agents in &lt;code&gt;agents&lt;/code&gt;
 When &lt;code&gt;agents&lt;/code&gt; is provided, &lt;code&gt;agent_model&lt;/code&gt; should be set to null or ignored; if both are provided, they must match (same names, correct length) or training will raise an error.&lt;/p&gt;</description></item><item><title>Changelog</title><link>/docs/dev/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/changelog/</guid><description>&lt;hr&gt;
 &lt;h2 id="version-141"&gt;Version 1.4.1&lt;a class="anchor" href="#version-141"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow comparator as a centralized coordinator. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Support comparator to be a centralized coordinator. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Allow to deploy LLM agents, reward model and comparator in different devices.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-140"&gt;Version 1.4.0&lt;a class="anchor" href="#version-140"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -111,7 +112,28 @@ When &lt;code&gt;agents&lt;/code&gt; is provided, &lt;code&gt;agent_model&lt;/co
 &lt;li&gt;Change the x-axis from data_step to env_step.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-130"&gt;Version 1.3.0&lt;a class="anchor" href="#version-130"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Use TD error as critic update target in IACTrainer and MAACTrainer.&lt;/p&gt;</description></item><item><title>Code Completion</title><link>/docs/env/code-completion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/env/code-completion/</guid><description>&lt;!-- External link entry --&gt;</description></item><item><title>Multi-Agent REINFORCE</title><link>/docs/user-guide/multi-agent-reinforce/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-guide/multi-agent-reinforce/</guid><description>&lt;p&gt;REINFORCE is a class of policy gradient methods that optimize the policy directly using sampled returns.
+&lt;ul&gt;
+&lt;li&gt;Use TD error as critic update target in IACTrainer and MAACTrainer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="version-129"&gt;Version 1.2.9&lt;a class="anchor" href="#version-129"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add MAACTrainer (separated centralized critic), now both IACTrainer and MAACTrainer can support single-turn training.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="version-128"&gt;Version 1.2.8&lt;a class="anchor" href="#version-128"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The critic in IACTrainer now estimate V rather than Q.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="version-127"&gt;Version 1.2.7&lt;a class="anchor" href="#version-127"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Change the IPPOTrainer to be IACTrainer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="version-126"&gt;Version 1.2.6&lt;a class="anchor" href="#version-126"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Including MAGRPO, MAREINFORCE, MARLOO, MAREMAX, and IPPO trainers for multi-agent reinforcement learning with LLMs.&lt;/li&gt;
+&lt;li&gt;Support for multi-turn training with custom external feedback mechanisms.&lt;/li&gt;
+&lt;li&gt;LLM collaboration environments for various tasks.&lt;/li&gt;
+&lt;li&gt;Comprehensive documentation and examples for getting started.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Code Completion</title><link>/docs/env/code-completion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/env/code-completion/</guid><description>&lt;!-- External link entry --&gt;</description></item><item><title>Multi-Agent REINFORCE</title><link>/docs/user-guide/multi-agent-reinforce/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-guide/multi-agent-reinforce/</guid><description>&lt;p&gt;REINFORCE is a class of policy gradient methods that optimize the policy directly using sampled returns.
 It has been widely used to fine-tune LLMs because of its simplicity and efficiency, e.g., &lt;a href="https://arxiv.org/pdf/2402.03300"&gt;GRPO&lt;/a&gt;, &lt;a href="https://arxiv.org/abs/2503.20783"&gt;Dr. GRPO&lt;/a&gt;, &lt;a href="https://openreview.net/forum?id=r1lgTGL5DE"&gt;RLOO&lt;/a&gt;, &lt;a href="https://arxiv.org/abs/2310.1050"&gt;ReMax&lt;/a&gt;, &lt;a href="https://arxiv.org/abs/2506.05183"&gt;TreeRPO&lt;/a&gt;, and &lt;a href="https://arxiv.org/abs/2501.03262"&gt;REINFORCE++&lt;/a&gt;.
 REINFORCE can be extended to multi-agent settings, where multiple LLM agents response synchronously and their joint responses form a solution at each turn to receive a shared reward at each turn.&lt;/p&gt;
 &lt;h2 id="ma-reinforce"&gt;MA-REINFORCE&lt;a class="anchor" href="#ma-reinforce"&gt;#&lt;/a&gt;&lt;/h2&gt;
