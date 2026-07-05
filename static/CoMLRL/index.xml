@@ -52,7 +52,7 @@ Users can load a list of heterogeneous agents in &lt;code&gt;agents&lt;/code&gt;
 When &lt;code&gt;agents&lt;/code&gt; is provided, &lt;code&gt;agent_model&lt;/code&gt; should be set to null or ignored; if both are provided, they must match (same names, correct length) or training will raise an error.&lt;/p&gt;</description></item><item><title>Changelog</title><link>/docs/dev/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/changelog/</guid><description>&lt;hr&gt;
 &lt;h2 id="version-141"&gt;Version 1.4.1&lt;a class="anchor" href="#version-141"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow comparator with centralized coordinator. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Allow comparator as a centralized coordinator. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-140"&gt;Version 1.4.0&lt;a class="anchor" href="#version-140"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
