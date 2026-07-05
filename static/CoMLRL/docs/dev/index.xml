@@ -28,6 +28,10 @@
 &lt;/div&gt;</description></item><item><title>Changelog</title><link>/docs/dev/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/dev/changelog/</guid><description>&lt;hr&gt;
 &lt;h2 id="version-140"&gt;Version 1.4.0&lt;a class="anchor" href="#version-140"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;Allow comparator with centralized coordinator. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="version-140-1"&gt;Version 1.4.0&lt;a class="anchor" href="#version-140-1"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;Add online preference-learning methods. (&lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/68"&gt;#68&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Add dataset drift logger.&lt;/li&gt;
 &lt;/ul&gt;
