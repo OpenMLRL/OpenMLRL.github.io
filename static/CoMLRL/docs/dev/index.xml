@@ -30,6 +30,8 @@
 &lt;ul&gt;
 &lt;li&gt;Support comparator to be a centralized coordinator (PR &lt;a href="https://github.com/OpenMLRL/CoMLRL/pull/69"&gt;#69&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Allow to deploy LLM agents, reward model and comparator in different devices (commit &lt;a href="https://github.com/OpenMLRL/CoMLRL/commit/7cbb7928e4569359021f094686d3a01c197e2223"&gt;7cbb792&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Allow copying current models as comparators on new devices (commit &lt;a href="https://github.com/OpenMLRL/CoMLRL/commit/d8d493a044d6a0b7b5d6aaaea2bf8bca2bfca81f"&gt;d8d493a&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Optimize GPU memory usage by timely releasing the unused models (commit &lt;a href="https://github.com/OpenMLRL/CoMLRL/commit/d0c6376cf843aaa9eb14e4c9f94cdf43a7a85f30"&gt;d0c6376&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="version-140"&gt;Version 1.4.0&lt;a class="anchor" href="#version-140"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
