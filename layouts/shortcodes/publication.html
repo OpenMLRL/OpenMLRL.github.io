@@ -1,0 +1,12 @@
+<article class="publication" aria-label="{{ .Get "title" }}">
+  <h2>{{ .Get "title" }}</h2>
+  <p class="publication-authors">{{ .Get "authors" }}</p>
+  <p class="publication-meta">
+    <span class="publication-venue">{{ .Get "venue" }}</span>
+    {{ with .Get "status" }}<span class="publication-status">· {{ . }}</span>{{ end }}
+  </p>
+  <div class="publication-links">
+    <a href="{{ .Get "paper" }}">Paper <span aria-hidden="true">↗</span></a>
+    {{ with .Get "talk" }}<a href="{{ . }}">Talk <span aria-hidden="true">↗</span></a>{{ end }}
+  </div>
+</article>

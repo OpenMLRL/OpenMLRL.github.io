@@ -8,6 +8,7 @@ description: |
   Iterative studies on how language-enabled agents cooperate, critique, and
   recover when placed in the same control loop.
 card_tagline: "Open-Source Library for Cooperative Multi-LLM Reinforcement Learning"
+card_logo: img/comlrl-logo.png
 build:
   render: false
 resources:

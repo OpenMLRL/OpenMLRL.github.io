@@ -1,10 +1,17 @@
 # OpenMLRL.github.io
 
-Static site for the OpenMLRL collective built with [Hugo](https://gohugo.io/) and
-the [`hugo-theme-gallery`](https://themes.gohugo.io/themes/hugo-theme-gallery/)
-template. The repository mirrors the layout that powers the `docs/` site inside
-[`OpenMLRL/CoMLRL`](https://github.com/OpenMLRL/CoMLRL/tree/main/docs): only the
-source files live in Git, while the rendered HTML is produced in CI.
+Static site for the OpenMLRL collective built with [Hugo](https://gohugo.io/).
+The homepage and Research page use local templates and styles; the
+[`hugo-theme-gallery`](https://themes.gohugo.io/themes/hugo-theme-gallery/)
+submodule supplies fallback templates. GitHub Pages builds the site in CI and
+bundles the separately built CoMLRL documentation under `/CoMLRL/`.
+
+## Homepage and research
+
+- `layouts/_default/home.html` defines the homepage, with introductory copy in `content/_index.md`.
+- `assets/css/custom.css` controls typography, layout, and responsive breakpoints. Inter is hosted locally in `assets/fonts/`, with its license.
+- `data/publications.yaml` contains the publications shown on the `/research/` page.
+- `layouts/partials/collective-visual.html` contains the SVG collaboration illustration. Its animation respects reduced-motion preferences.
 
 ## Local development
 
@@ -13,10 +20,10 @@ source files live in Git, while the rendered HTML is produced in CI.
 3. Start the hot-reload server:
 
    ```bash
-   hugo server --buildDrafts
+   hugo server --port 1314
    ```
 
-   The site becomes available at <http://localhost:1313>. Hugo keeps the build
+   The site becomes available at <http://localhost:1314>. Hugo keeps the build
    in memory, so no files inside `public/` are written to disk.
 
 To create a production build locally, run `hugo --gc --minify`. The output still

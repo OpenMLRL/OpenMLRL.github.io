@@ -1,0 +1,13 @@
+<article class="publication" aria-label="{{ .title }}">
+  <h2>{{ .title }}</h2>
+  {{ $authors := split .authors ", " }}
+  <p class="publication-authors">{{ range $index, $author := $authors }}{{ if $index }} {{ end }}<span class="publication-author">{{ $author }}{{ if lt (add $index 1) (len $authors) }},{{ end }}</span>{{ end }}</p>
+  <p class="publication-meta">
+    <span class="publication-venue">{{ .venue }}</span>
+    {{ with .status }}<span class="publication-status">· {{ . }}</span>{{ end }}
+  </p>
+  <div class="publication-links">
+    <a href="{{ .paper }}">Paper <span aria-hidden="true">↗</span></a>
+    {{ with .talk }}<a href="{{ . }}">Talk <span aria-hidden="true">↗</span></a>{{ end }}
+  </div>
+</article>

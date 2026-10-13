@@ -1,0 +1,135 @@
+<svg class="collective-visual" viewBox="0 0 560 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="collective-title" aria-describedby="collective-description" focusable="false">
+  <title id="collective-title">Multiple agents, joint completion</title>
+  <desc id="collective-description">Three language model agents connect to a shared circular composition representing their joint completion.</desc>
+  <defs>
+    <linearGradient id="collective-ink" x1="112" y1="72" x2="415" y2="345" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#bca5e5" />
+      <stop offset="1" stop-color="#7546b6" />
+    </linearGradient>
+    <linearGradient id="collective-wash" x1="280" y1="38" x2="280" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f5f0fc" stop-opacity="0" />
+      <stop offset=".58" stop-color="#f5f0fc" stop-opacity=".65" />
+      <stop offset="1" stop-color="#f5f0fc" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="collective-dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r=".7" fill="#bca5e5" fill-opacity=".3" />
+    </pattern>
+    <marker id="collective-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="m1 1 4 2.5L1 6" stroke="#9978c9" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+    <g id="collective-agent">
+      <circle r="35" fill="#fff" />
+      <circle r="35" stroke="#dacceb" stroke-width="1" />
+      <circle r="27" stroke="#bca5e5" stroke-opacity=".45" stroke-dasharray="1 5" stroke-linecap="round" />
+      <path d="M-12-12H12V12H-12ZM-12 0H12M0-12V12" stroke="#bca5e5" stroke-width=".8" />
+      <g fill="#a98bd2">
+        <circle cx="-12" cy="-12" r="2" />
+        <circle cx="0" cy="-12" r="2" />
+        <circle cx="12" cy="-12" r="2" />
+        <circle cx="-12" cy="0" r="2" />
+        <circle cx="12" cy="0" r="2" />
+        <circle cx="-12" cy="12" r="2" />
+        <circle cx="0" cy="12" r="2" />
+        <circle cx="12" cy="12" r="2" />
+      </g>
+      <circle r="3.5" fill="#7546b6" />
+      <path d="M-4-35H4M-4 35H4" stroke="#9978c9" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <style>
+    .collective-visual { display: block; width: 100%; height: auto; }
+    .collective-visual__label { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.1px; fill: #89759f; }
+    .collective-visual__orbit { transform-box: fill-box; transform-origin: center; animation: collective-orbit 90s linear infinite; }
+    .collective-visual__agent { animation: collective-agent-float 7.2s ease-in-out infinite; animation-delay: var(--agent-delay, 0s); }
+    .collective-visual__halo { opacity: .16; animation: collective-agent-pulse 7.2s ease-in-out infinite; animation-delay: var(--agent-delay, 0s); }
+    .collective-visual__signal { animation: collective-signal 7.2s linear infinite; animation-delay: var(--signal-delay, 0s); }
+    .collective-visual__exchange { opacity: .7; animation: collective-exchange 3.6s ease-in-out infinite alternate; animation-delay: var(--signal-delay, 0s); }
+    @keyframes collective-orbit { to { transform: rotate(360deg); } }
+    @keyframes collective-agent-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    @keyframes collective-agent-pulse { 0%, 100% { opacity: .12; } 45% { opacity: .55; } }
+    @keyframes collective-signal { to { stroke-dashoffset: -100; } }
+    @keyframes collective-exchange { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -98; } }
+    @media (max-width: 560px) {
+      .collective-visual__label { font-size: 14px; letter-spacing: 1px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .collective-visual__orbit, .collective-visual__agent, .collective-visual__halo,
+      .collective-visual__signal, .collective-visual__exchange { animation: none; transform: none; }
+      .collective-visual__signal, .collective-visual__exchange { opacity: 0; }
+    }
+  </style>
+
+  <path fill="url(#collective-wash)" d="M48 24H512V406H48z" />
+  <path fill="url(#collective-dots)" d="M72 56H488V376H72z" />
+
+  <!-- A quiet construction grid keeps the network grounded in the page. -->
+  <g stroke="#e9e3ef" stroke-width=".75">
+    <path d="M48 110H512M48 278H512M112 38V392M280 38V392M448 38V392" />
+    <path d="M42 110H54M48 104V116M506 110H518M512 104V116M42 278H54M48 272V284M506 278H518M512 272V284" />
+  </g>
+
+  <!-- Each policy contributes to the shared outcome and receives feedback. -->
+  <g stroke="#dacceb" stroke-width="1" stroke-linecap="round">
+    <path d="M148 110H244M316 110H412" stroke-dasharray="2 5" />
+    <path d="M112 138C112 223 166 279 210 279" marker-end="url(#collective-arrow)" />
+    <path d="M280 138V206" marker-end="url(#collective-arrow)" />
+    <path d="M448 138C448 223 394 279 350 279" marker-end="url(#collective-arrow)" />
+    <path d="M234 230C203 199 166 178 134 145" marker-end="url(#collective-arrow)" />
+    <path d="M326 230C357 199 394 178 426 145" marker-end="url(#collective-arrow)" />
+  </g>
+  <g stroke="url(#collective-ink)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1.5 98.5">
+    <path class="collective-visual__signal" pathLength="100" d="M112 138C112 223 166 279 210 279" />
+    <path class="collective-visual__signal" style="--signal-delay: -2.4s" pathLength="100" d="M280 138V206" />
+    <path class="collective-visual__signal" style="--signal-delay: -4.8s" pathLength="100" d="M448 138C448 223 394 279 350 279" />
+  </g>
+  <g stroke="#a286c8" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 198">
+    <path class="collective-visual__exchange" style="--signal-delay: -1.2s" pathLength="100" d="M148 110H244" />
+    <path class="collective-visual__exchange" style="--signal-delay: -3.6s" pathLength="100" d="M316 110H412" />
+  </g>
+
+  <g class="collective-visual__agents">
+    <g class="collective-visual__agent">
+      <circle class="collective-visual__halo" cx="112" cy="110" r="39" stroke="#b298d4" stroke-width=".9" />
+      <use href="#collective-agent" x="112" y="110" />
+    </g>
+    <g class="collective-visual__agent" style="--agent-delay: -2.4s">
+      <circle class="collective-visual__halo" cx="280" cy="110" r="39" stroke="#b298d4" stroke-width=".9" />
+      <use href="#collective-agent" x="280" y="110" />
+    </g>
+    <g class="collective-visual__agent" style="--agent-delay: -4.8s">
+      <circle class="collective-visual__halo" cx="448" cy="110" r="39" stroke="#b298d4" stroke-width=".9" />
+      <use href="#collective-agent" x="448" y="110" />
+    </g>
+    <g class="collective-visual__label" text-anchor="middle">
+      <text x="112" y="56">AGENT 01</text>
+      <text x="280" y="56">AGENT 02</text>
+      <text x="448" y="56">AGENT 03</text>
+    </g>
+  </g>
+
+  <g class="collective-visual__completion">
+    <circle cx="280" cy="278" r="101" stroke="#e3d8f0" stroke-width=".75" stroke-dasharray="1 6" stroke-linecap="round" />
+    <circle cx="280" cy="278" r="70" fill="#fff" fill-opacity=".92" stroke="#d4c3e9" stroke-width=".9" />
+    <circle cx="280" cy="278" r="59" stroke="#e8dff3" stroke-width=".8" />
+    <g class="collective-visual__orbit">
+      <circle cx="280" cy="278" r="84" stroke="#c8b2e4" stroke-width=".8" stroke-dasharray="80 96" />
+      <circle cx="280" cy="194" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
+      <circle cx="352.75" cy="320" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
+      <circle cx="207.25" cy="320" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
+    </g>
+    <g stroke="url(#collective-ink)" stroke-width="1.2">
+      <path d="M280 238C299 238 314 254 314 273S299 308 280 308 246 292 246 273 261 238 280 238Z" />
+      <path d="M245.4 298C235.9 281.5 242.3 260.5 258.8 251S297 246.5 306.5 263 309.6 300.5 293.2 310 254.9 314.5 245.4 298Z" />
+      <path d="M314.6 298C305.1 314.5 282.8 319.5 266.3 310S243.8 279.5 253.3 263 285.1 241.5 301.5 251 324.1 281.5 314.6 298Z" />
+    </g>
+    <circle cx="280" cy="278" r="8" fill="#f0e9f8" stroke="#a98bd2" stroke-width=".9" />
+    <circle cx="280" cy="278" r="2.5" fill="#7546b6" />
+    <g fill="#fff" stroke="#a98bd2" stroke-width="1">
+      <circle cx="280" cy="238" r="2.5" />
+      <circle cx="245.4" cy="298" r="2.5" />
+      <circle cx="314.6" cy="298" r="2.5" />
+    </g>
+  </g>
+  <text class="collective-visual__label" x="280" y="403" text-anchor="middle">Joint Completion</text>
+</svg>

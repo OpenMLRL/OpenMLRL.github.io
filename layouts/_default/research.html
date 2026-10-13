@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="research-page" aria-labelledby="research-title">
+    <header class="research-intro">
+      <h1 id="research-title">{{ .Title }}</h1>
+    </header>
+    <div class="publications">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}

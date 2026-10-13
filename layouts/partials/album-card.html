@@ -1,22 +1,25 @@
 {{ $gallery := partial "get-gallery.html" . }}
-{{ with $gallery }}
-  {{ $href := .page.Params.external_url | default .page.RelPermalink }}
-  <a class="card" href="{{ $href }}" title="{{ .page.Title }}"{{ if .page.Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>
+{{ if or $gallery .Params.card_tagline }}
+  {{ $href := .Params.external_url | default .RelPermalink }}
+  <a class="card" href="{{ $href }}" title="{{ .Title }}"{{ if .Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>
     <div>
-      {{ $logo := resources.Get "img/comlrl-logo.png" }}
+      {{ $logo := false }}
+      {{ with .Params.card_logo }}{{ $logo = resources.Get . }}{{ end }}
       {{ if $logo }}
-        <img class="card-logo" src="{{ $logo.RelPermalink }}" alt="{{ .page.Title }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" loading="lazy" />
+        <img class="card-logo" src="{{ $logo.RelPermalink }}" alt="{{ .Title }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" loading="lazy" />
       {{ else }}
-        <h2>{{ .page.Title }}</h2>
+        <h2>{{ .Title }}</h2>
       {{ end }}
       <p>
-        {{ with .page.Params.card_tagline }}
+        {{ with .Params.card_tagline }}
           <em>{{ . }}</em>
         {{ else }}
-          {{ if gt .albumCount 0 }}
-            {{ T "albumCount" (dict "count" (.albumCount | lang.FormatNumber 0) "photoCount" (.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}
-          {{ else }}
-            {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
+          {{ with $gallery }}
+            {{ if gt .albumCount 0 }}
+              {{ T "albumCount" (dict "count" (.albumCount | lang.FormatNumber 0) "photoCount" (.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}
+            {{ else }}
+              {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
+            {{ end }}
           {{ end }}
         {{ end }}
       </p>

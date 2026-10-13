@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <meta name="theme-color" content="#fafaf8">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ $mark := resources.Get "img/openmlrl-mark.svg" | fingerprint }}
+  <link rel="icon" type="image/svg+xml" href="{{ $mark.RelPermalink }}">
+  {{ $font := resources.Get "fonts/InterVariable.woff2" | fingerprint }}
+  <link rel="preload" href="{{ $font.RelPermalink }}" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:Inter;src:url("{{ $font.RelPermalink }}") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}</style>
+  {{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ partial "opengraph.html" . }}
+  {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">
+  {{ end }}
+</head>

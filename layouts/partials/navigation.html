@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="OpenMLRL home">
+      {{ $mark := resources.Get "img/openmlrl-mark.svg" | fingerprint }}
+      <img src="{{ $mark.RelPermalink }}" alt="" width="32" height="32">
+      <span>OpenMLRL</span>
+    </a>
+    <nav class="site-navigation" aria-label="Main navigation">
+      <a href="{{ .Site.Home.RelPermalink }}#about">About</a>
+      {{ with .Site.GetPage "/research" }}
+        <a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>Research</a>
+      {{ end }}
+    </nav>
+    <nav class="header-community" aria-label="Community links">
+      <a href="{{ .Site.Params.socialIcons.github }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="{{ .Site.Params.socialIcons.huggingface }}">Hugging Face <span aria-hidden="true">↗</span></a>
+      <a href="{{ .Site.Params.socialIcons.email }}">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
