@@ -65,6 +65,7 @@ jobs:
           restore-keys: |
             docs-translations-v1-${{ matrix.language }}-${{ env.OLLAMA_MODEL }}-${{ hashFiles('docs/scripts/translations.py', 'docs/data/languages.json') }}-${{ needs.docs-source.outputs.sha }}-
             docs-translations-v1-${{ matrix.language }}-${{ env.OLLAMA_MODEL }}-${{ hashFiles('docs/scripts/translations.py', 'docs/data/languages.json') }}-
+            docs-translations-v1-${{ matrix.language }}-${{ env.OLLAMA_MODEL }}-
 
       - name: Check whether translations are current
         id: cached-build
