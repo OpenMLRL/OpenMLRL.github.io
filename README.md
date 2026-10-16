@@ -32,11 +32,27 @@ mistake.
 
 ## CoMLRL docs
 
-The GitHub Pages workflow clones [`OpenMLRL/CoMLRL`](https://github.com/OpenMLRL/CoMLRL),
-builds its Hugo docs site with `HUGO_RELATIVEURLS=false hugo --gc --minify -s docs -b "$SITE_BASE_URL/CoMLRL/"`,
-runs this gallery site with `hugo --gc --minify`, and finally copies the generated
-`docs/public/` folder straight into the deployment directory (`public/CoMLRL/`)
-before uploading to Pages. No CoMLRL HTML or caches live in either repository; they
-only exist inside the CI workspace and the published artifact. For local previews,
-run `hugo server -s docs` in the CoMLRL repo independently (it serves on another port),
-and preview this gallery via `hugo server` as usual.
+The Pages workflow publishes both this website and the CoMLRL documentation.
+It runs on website pushes, manual dispatches, and `comlrl-docs-updated` events
+sent by CoMLRL after documentation checks pass. Those cross-repository events
+use the existing `OPENMLRL_TOKEN` secret in CoMLRL, with Contents write access
+to this repository. Both repositories' workflow changes must be pushed to `main`
+to enable the complete flow.
+
+Each run resolves one revision of CoMLRL's current `main` branch. Six parallel jobs reuse cached
+translations for Simplified Chinese, Japanese, Korean, Spanish, French, and
+German. Missing or changed pages are translated on the GitHub runner using
+Ollama and `qwen2.5-coder:3b`; no translation API key is needed. A cold build can
+take hours on CPU. Cached builds skip Ollama entirely when translations are
+current, and valid completed pages are cached even if a later translation fails.
+
+The final job runs `docs/scripts/build.py --multilingual --cache-only`, validates
+all seven languages, and bundles the generated site under `public/CoMLRL/`.
+Only a successful build is deployed; translation failures leave the previous
+site available. Translations are kept in Actions caches and temporary artifacts,
+not committed to Git. Legacy files in `static/CoMLRL/` are replaced in the final
+deployment artifact, so they cannot overwrite the multilingual build.
+
+For a local multilingual preview, run
+`python3 docs/scripts/preview.py --multilingual` in the CoMLRL repository and
+preview this website with `hugo server --port 1314`.
