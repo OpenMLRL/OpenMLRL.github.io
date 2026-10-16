@@ -40,7 +40,7 @@ jobs:
     env:
       DOCS_LANGUAGE: ${{ matrix.language }}
       SITE_BASE_URL: https://openmlrl.github.io
-      OLLAMA_MODEL: qwen2.5-coder:3b
+      OLLAMA_MODEL: translategemma:12b
       OLLAMA_HOST: 127.0.0.1:11434
       OLLAMA_MODELS: ${{ github.workspace }}/.cache/ollama-models
     steps:
