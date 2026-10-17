@@ -9,4 +9,5 @@ resources/_gen/
 node_modules/
 *.log
 .idea/
+.claude/
 *.bak
