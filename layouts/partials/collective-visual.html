@@ -1,6 +1,6 @@
 <svg class="collective-visual" viewBox="0 0 560 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="collective-title" aria-describedby="collective-description" focusable="false">
   <title id="collective-title">Multiple agents, joint completion</title>
-  <desc id="collective-description">Three language model agents connect to a shared circular composition representing their joint completion.</desc>
+  <desc id="collective-description">Three independent language model agents send their outputs into a shared circle representing their joint completion. Over successive turns, rings build up around it.</desc>
   <defs>
     <linearGradient id="collective-ink" x1="112" y1="72" x2="415" y2="345" gradientUnits="userSpaceOnUse">
       <stop stop-color="#bca5e5" />
@@ -39,24 +39,27 @@
 
   <style>
     .collective-visual { display: block; width: 100%; height: auto; }
-    .collective-visual__label { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.1px; fill: #89759f; }
-    .collective-visual__orbit { transform-box: fill-box; transform-origin: center; animation: collective-orbit 90s linear infinite; }
+    .collective-visual__label { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.1px; fill: #89759f; }
     .collective-visual__agent { animation: collective-agent-float 7.2s ease-in-out infinite; animation-delay: var(--agent-delay, 0s); }
     .collective-visual__halo { opacity: .16; animation: collective-agent-pulse 7.2s ease-in-out infinite; animation-delay: var(--agent-delay, 0s); }
-    .collective-visual__signal { animation: collective-signal 7.2s linear infinite; animation-delay: var(--signal-delay, 0s); }
-    .collective-visual__exchange { opacity: .7; animation: collective-exchange 3.6s ease-in-out infinite alternate; animation-delay: var(--signal-delay, 0s); }
-    @keyframes collective-orbit { to { transform: rotate(360deg); } }
+    .collective-visual__signal { animation: collective-signal 14.4s ease-in-out infinite; }
+    .collective-visual__turns { animation: collective-turns 14.4s ease-in-out infinite; }
+    .collective-visual__turn { opacity: .4; stroke-dasharray: 100; animation: 14.4s ease-in-out infinite var(--turn); }
     @keyframes collective-agent-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
     @keyframes collective-agent-pulse { 0%, 100% { opacity: .12; } 45% { opacity: .55; } }
-    @keyframes collective-signal { to { stroke-dashoffset: -100; } }
-    @keyframes collective-exchange { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -98; } }
+    /* Three turns, then a rest: in each turn the agents answer together and one more ring closes. */
+    @keyframes collective-signal { 0% { stroke-dashoffset: 0; } 16.7%, 25% { stroke-dashoffset: -100; } 41.7%, 50% { stroke-dashoffset: -200; } 66.7%, 100% { stroke-dashoffset: -300; } }
+    @keyframes collective-turn-1 { 0%, 16% { stroke-dashoffset: 100; opacity: 1; } 30% { stroke-dashoffset: 0; opacity: 1; } 40%, 100% { stroke-dashoffset: 0; opacity: .4; } }
+    @keyframes collective-turn-2 { 0%, 41% { stroke-dashoffset: 100; opacity: 1; } 55% { stroke-dashoffset: 0; opacity: 1; } 65%, 100% { stroke-dashoffset: 0; opacity: .4; } }
+    @keyframes collective-turn-3 { 0%, 66% { stroke-dashoffset: 100; opacity: 1; } 80% { stroke-dashoffset: 0; opacity: 1; } 90%, 100% { stroke-dashoffset: 0; opacity: .4; } }
+    @keyframes collective-turns { 0%, 86% { opacity: 1; } 97%, 100% { opacity: 0; } }
     @media (max-width: 560px) {
-      .collective-visual__label { font-size: 14px; letter-spacing: 1px; }
+      .collective-visual__label { font-size: 16px; letter-spacing: 1px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .collective-visual__orbit, .collective-visual__agent, .collective-visual__halo,
-      .collective-visual__signal, .collective-visual__exchange { animation: none; transform: none; }
-      .collective-visual__signal, .collective-visual__exchange { opacity: 0; }
+      .collective-visual__agent, .collective-visual__halo, .collective-visual__signal,
+      .collective-visual__turns, .collective-visual__turn { animation: none; transform: none; }
+      .collective-visual__signal { opacity: 0; }
     }
   </style>
 
@@ -69,23 +72,16 @@
     <path d="M42 110H54M48 104V116M506 110H518M512 104V116M42 278H54M48 272V284M506 278H518M512 272V284" />
   </g>
 
-  <!-- Each policy contributes to the shared outcome and receives feedback. -->
+  <!-- Each policy contributes to the shared outcome independently. -->
   <g stroke="#dacceb" stroke-width="1" stroke-linecap="round">
-    <path d="M148 110H244M316 110H412" stroke-dasharray="2 5" />
     <path d="M112 138C112 223 166 279 210 279" marker-end="url(#collective-arrow)" />
     <path d="M280 138V206" marker-end="url(#collective-arrow)" />
     <path d="M448 138C448 223 394 279 350 279" marker-end="url(#collective-arrow)" />
-    <path d="M234 230C203 199 166 178 134 145" marker-end="url(#collective-arrow)" />
-    <path d="M326 230C357 199 394 178 426 145" marker-end="url(#collective-arrow)" />
   </g>
   <g stroke="url(#collective-ink)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1.5 98.5">
     <path class="collective-visual__signal" pathLength="100" d="M112 138C112 223 166 279 210 279" />
-    <path class="collective-visual__signal" style="--signal-delay: -2.4s" pathLength="100" d="M280 138V206" />
-    <path class="collective-visual__signal" style="--signal-delay: -4.8s" pathLength="100" d="M448 138C448 223 394 279 350 279" />
-  </g>
-  <g stroke="#a286c8" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 198">
-    <path class="collective-visual__exchange" style="--signal-delay: -1.2s" pathLength="100" d="M148 110H244" />
-    <path class="collective-visual__exchange" style="--signal-delay: -3.6s" pathLength="100" d="M316 110H412" />
+    <path class="collective-visual__signal" pathLength="100" d="M280 138V206" />
+    <path class="collective-visual__signal" pathLength="100" d="M448 138C448 223 394 279 350 279" />
   </g>
 
   <g class="collective-visual__agents">
@@ -112,11 +108,11 @@
     <circle cx="280" cy="278" r="101" stroke="#e3d8f0" stroke-width=".75" stroke-dasharray="1 6" stroke-linecap="round" />
     <circle cx="280" cy="278" r="70" fill="#fff" fill-opacity=".92" stroke="#d4c3e9" stroke-width=".9" />
     <circle cx="280" cy="278" r="59" stroke="#e8dff3" stroke-width=".8" />
-    <g class="collective-visual__orbit">
-      <circle cx="280" cy="278" r="84" stroke="#c8b2e4" stroke-width=".8" stroke-dasharray="80 96" />
-      <circle cx="280" cy="194" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
-      <circle cx="352.75" cy="320" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
-      <circle cx="207.25" cy="320" r="3" fill="#a98bd2" stroke="#fff" stroke-width="1.5" />
+    <!-- One ring per turn, drawn clockwise from the top. -->
+    <g class="collective-visual__turns" stroke="url(#collective-ink)" stroke-width=".8">
+      <path class="collective-visual__turn" style="--turn: collective-turn-1" pathLength="100" d="M280 200a78 78 0 1 1 0 156a78 78 0 1 1 0-156" />
+      <path class="collective-visual__turn" style="--turn: collective-turn-2" pathLength="100" d="M280 192a86 86 0 1 1 0 172a86 86 0 1 1 0-172" />
+      <path class="collective-visual__turn" style="--turn: collective-turn-3" pathLength="100" d="M280 184a94 94 0 1 1 0 188a94 94 0 1 1 0-188" />
     </g>
     <g stroke="url(#collective-ink)" stroke-width="1.2">
       <path d="M280 238C299 238 314 254 314 273S299 308 280 308 246 292 246 273 261 238 280 238Z" />
